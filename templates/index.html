@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IP Status</title>
+    <meta http-equiv="refresh" content="1">
+</head>
+<body>
+    <h1>IP Status</h1>
+    <div style="display:flex;flex-direction:row;">
+        <div style="background-color:white;padding:10px;margin-right:20px;">
+            <h3 style="color:black;">Ping atılan tüm IP sayısı</h3>
+            <h2 style="color:black;text-align:center;">{{ ipsVal }}</h2>
+        </div>
+        <div style="background-color:green;padding:10px;margin-right:20px;">
+            <h3 style="color:white;">Başarılı IP Sayısı</h3>
+            <h2 style="color:white;text-align:center;">{{ ping_success }}</h2>
+        </div>
+        <div style="background-color:red;padding:10px;">
+            <h3 style="color:white;">Başarısız IP Sayısı</h3>
+            <h2 style="color:white;text-align:center;">{{ ping_failure }}</h2>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>IP Address</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result[1] }}</td>
+                <td style="color:{{ result[0] }}">{{ result[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
