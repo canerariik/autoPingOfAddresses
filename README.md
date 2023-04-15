@@ -10,4 +10,4 @@
 
 <p> As an experiment, 6 IPs have been tried for now, but as a code structure, pinging 200-300 IPs has been coded to complete the ping process in a short time. </p>
 
-<p> ![ipCheck](https://user-images.githubusercontent.com/76872548/232254172-32518e02-1a6a-4fac-8dac-8a6e0d325a23.png) </p>
+![ipCheck](https://user-images.githubusercontent.com/76872548/232254172-32518e02-1a6a-4fac-8dac-8a6e0d325a23.png)
